@@ -16,6 +16,7 @@ SELECT
     ELSE minimum_nights
   END AS minimum_nights,
   host_id,
+  price_str,
   REPLACE(
     price_str,
     '$'
@@ -23,7 +24,6 @@ SELECT
     10,
     2
   ) AS price,
-  price_str,
   created_at,
   updated_at
 FROM
